@@ -216,6 +216,15 @@
   },
   "styles": {
     "blocks": {
+      "core/paragraph": {
+        "elements": {
+          "link": {
+            "color": {
+              "text": "var(--wp--preset--color--contrast)"
+            }
+          }
+        }
+      },
       "core/comments": {
         "elements": {
           "link": {
