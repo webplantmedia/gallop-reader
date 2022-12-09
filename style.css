@@ -39,3 +39,7 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
   height: auto !important;
   border-radius: 99em;
 }
+.wp-block-post-author {
+  display: flex;
+  align-items: center;
+}

@@ -1,6 +1,6 @@
 <?php
 
-add_action('wp_enqueue_scripts', 'gallop_theme_enqueue_fonts', 9);
+add_action('wp_enqueue_scripts', 'gallop_reader_enqueue_fonts', 9);
 
 function gallop_reader_enqueue_fonts()
 {
