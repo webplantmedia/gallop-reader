@@ -667,6 +667,12 @@
         "typography": {
           "textDecoration": "underline"
         }
+      },
+      "caption": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--small)",
+          "fontFamily": "var(--wp--preset--font-family--ibm-plex-mono)"
+        }
       }
     },
     "spacing": {
