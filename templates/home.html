@@ -1,37 +1,107 @@
-<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<!-- wp:template-part {"slug":"header","theme":"gallop-reader","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--70)">
-	<!-- wp:heading {"level":1,"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|60"}}}} -->
-	<h1 class="alignwide" style="margin-bottom:var(--wp--preset--spacing--60)">Mindblown: a blog about philosophy.</h1>
-	<!-- /wp:heading -->
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"80px","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
+<main
+  class="wp-block-group"
+  style="margin-top: 80px; margin-bottom: var(--wp--preset--spacing--70)"
+>
+  <!-- wp:query {"queryId":0,"query":{"perPage":"7","pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"list","columns":2},"layout":{"type":"constrained"}} -->
+  <div class="wp-block-query">
+    <!-- wp:post-template -->
+    <!-- wp:post-featured-image {"isLink":true,"width":"100%","height":"250px","style":{"spacing":{"margin":{"bottom":"1.25rem"}}}} /-->
 
-	<!-- wp:query {"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"displayLayout":{"type":"flex","columns":3},"align":"wide","layout":{"type":"constrained"}} -->
-	<div class="wp-block-query alignwide">
-		<!-- wp:post-template {"align":"wide"} -->
-			<!-- wp:post-featured-image {"isLink":true,"width":"100%","height":"max(15vw, 30vh)","align":"wide"} /-->
-			<!-- wp:post-title {"isLink":true} /-->
-			<!-- wp:post-excerpt /-->
-			<!-- wp:post-date {"isLink":true} /-->
+    <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"className":"post-meta-wrap","layout":{"type":"flex","flexWrap":"wrap"},"fontSize":"small","fontFamily":"ibm-plex-mono"} -->
+    <div
+      class="
+        wp-block-group
+        post-meta-wrap
+        has-ibm-plex-mono-font-family has-small-font-size
+      "
+    >
+      <!-- wp:post-author {"avatarSize":24} /-->
 
-			<!-- wp:spacer {"height":"var(--wp--preset--spacing--40)"} -->
-			<div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
-			<!-- /wp:spacer -->
-		<!-- /wp:post-template -->
+      <!-- wp:post-date {"isLink":true} /-->
+    </div>
+    <!-- /wp:group -->
 
-		<!-- wp:query-pagination {"paginationArrow":"arrow","align":"wide","layout":{"type":"flex","justifyContent":"space-between"}} -->
-			<!-- wp:query-pagination-previous {"label":"Newer Posts"} /-->
-			<!-- wp:query-pagination-next {"label":"Older Posts"} /-->
-		<!-- /wp:query-pagination -->
-	</div>
-	<!-- /wp:query -->
+    <!-- wp:post-title {"isLink":true} /-->
 
-	<!-- wp:spacer {"height":"var(--wp--preset--spacing--60)"} -->
-	<div style="height:var(--wp--preset--spacing--60)" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
+    <!-- wp:post-excerpt {"fontSize":"medium"} /-->
 
-	<!-- wp:pattern {"slug":"twentytwentythree/cta"} /-->
+    <!-- wp:spacer {"height":"70px"} -->
+    <div style="height: 70px" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
+    <!-- /wp:post-template -->
+
+    <!-- wp:query-pagination {"paginationArrow":"arrow","align":"wide","layout":{"type":"flex","justifyContent":"space-between"},"fontSize":"small","fontFamily":"ibm-plex-mono"} -->
+    <!-- wp:query-pagination-previous {"label":"Newer Posts"} /-->
+
+    <!-- wp:query-pagination-next {"label":"Older Posts"} /-->
+    <!-- /wp:query-pagination -->
+  </div>
+  <!-- /wp:query -->
+
+  <!-- wp:spacer {"height":"var(\u002d\u002dwp\u002d\u002dpreset\u002d\u002dspacing\u002d\u002d60)"} -->
+  <div
+    style="height: var(--wp--preset--spacing--60)"
+    aria-hidden="true"
+    class="wp-block-spacer"
+  ></div>
+  <!-- /wp:spacer -->
+
+  <!-- wp:columns -->
+  <div class="wp-block-columns">
+    <!-- wp:column -->
+    <div class="wp-block-column">
+      <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.2"}},"fontSize":"x-large"} -->
+      <p class="has-x-large-font-size" style="line-height: 1.2">
+        Get in touch with us.
+      </p>
+      <!-- /wp:paragraph -->
+
+      <!-- wp:buttons -->
+      <div class="wp-block-buttons">
+        <!-- wp:button {"fontSize":"small"} -->
+        <div class="wp-block-button has-custom-font-size has-small-font-size">
+          <a
+            class="wp-block-button__link wp-element-button"
+            href="mailto:contact@icflubbock.org"
+            >Email Us</a
+          >
+        </div>
+        <!-- /wp:button -->
+
+        <!-- wp:button {"className":"is-style-outline","fontSize":"small"} -->
+        <div
+          class="
+            wp-block-button
+            has-custom-font-size
+            is-style-outline
+            has-small-font-size
+          "
+        >
+          <a
+            class="wp-block-button__link wp-element-button"
+            href="tel:8063001022"
+            >(806) 300-1022</a
+          >
+        </div>
+        <!-- /wp:button -->
+      </div>
+      <!-- /wp:buttons -->
+    </div>
+    <!-- /wp:column -->
+
+    <!-- wp:column -->
+    <div class="wp-block-column">
+      <!-- wp:separator -->
+      <hr class="wp-block-separator has-alpha-channel-opacity" />
+      <!-- /wp:separator -->
+    </div>
+    <!-- /wp:column -->
+  </div>
+  <!-- /wp:columns -->
 </main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+<!-- wp:template-part {"slug":"footer","theme":"gallop-reader","tagName":"footer"} /-->

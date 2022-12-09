@@ -1,18 +1,31 @@
-<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<!-- wp:template-part {"slug":"header","theme":"gallop-reader","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
-<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--50)">
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:post-featured-image {"overlayColor":"contrast","dimRatio":50,"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50","top":"calc(-1 * var(--wp--preset--spacing--50))"}}}} /-->
-		<!-- wp:post-title {"level":1,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} /-->
-	</div>
-	<!-- /wp:group -->
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"80px"}}},"layout":{"type":"default"}} -->
+<main class="wp-block-group" style="margin-top: 80px">
+  <!-- wp:group {"layout":{"type":"constrained"}} -->
+  <div class="wp-block-group">
+    <!-- wp:post-featured-image {"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50","top":"0px"}}}} /-->
 
-	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
-	<!-- wp:template-part {"slug":"post-meta"} /-->
-	<!-- wp:template-part {"slug":"comments","tagName":"section"} /-->
+    <!-- wp:group {"style":{"spacing":{"blockGap":"0.5ch"}},"layout":{"type":"flex"},"fontFamily":"ibm-plex-mono"} -->
+    <div class="wp-block-group has-ibm-plex-mono-font-family">
+      <!-- wp:post-author {"showBio":false,"fontSize":"small"} /-->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:post-title {"level":1,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} /-->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+  <!-- wp:group {"layout":{"type":"constrained"}} -->
+  <div class="wp-block-group">
+    <!-- wp:template-part {"slug":"post-meta","theme":"gallop-reader"} /-->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:template-part {"slug":"comments","theme":"gallop-reader","tagName":"section"} /-->
 </main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+<!-- wp:template-part {"slug":"footer","theme":"gallop-reader","tagName":"footer"} /-->

@@ -1,1 +1,70 @@
-<!-- wp:pattern {"slug":"twentytwentythree/hidden-comments"} /-->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","right":"0","bottom":"0","left":"0"}}},"layout":{"type":"constrained"}} -->
+<div
+  class="wp-block-group"
+  style="
+    padding-top: var(--wp--preset--spacing--50);
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  "
+>
+  <!-- wp:comments -->
+  <div class="wp-block-comments">
+    <!-- wp:heading -->
+    <h2>Comments</h2>
+    <!-- /wp:heading -->
+
+    <!-- wp:comments-title {"level":3} /-->
+
+    <!-- wp:comment-template -->
+    <!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} -->
+    <div
+      class="wp-block-columns"
+      style="margin-bottom: var(--wp--preset--spacing--40)"
+    >
+      <!-- wp:column {"width":"40px"} -->
+      <div class="wp-block-column" style="flex-basis: 40px">
+        <!-- wp:avatar {"size":40,"style":{"border":{"radius":"20px"}}} /-->
+      </div>
+      <!-- /wp:column -->
+
+      <!-- wp:column -->
+      <div class="wp-block-column">
+        <!-- wp:comment-author-name /-->
+
+        <!-- wp:group {"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"flex"},"fontSize":"small","fontFamily":"ibm-plex-mono"} -->
+        <div
+          class="
+            wp-block-group
+            has-ibm-plex-mono-font-family has-small-font-size
+          "
+          style="margin-top: 0px; margin-bottom: 0px"
+        >
+          <!-- wp:comment-date /-->
+
+          <!-- wp:comment-edit-link /-->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:comment-content /-->
+
+        <!-- wp:comment-reply-link {"fontSize":"small","fontFamily":"ibm-plex-mono"} /-->
+      </div>
+      <!-- /wp:column -->
+    </div>
+    <!-- /wp:columns -->
+    <!-- /wp:comment-template -->
+
+    <!-- wp:comments-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"space-between"}} -->
+    <!-- wp:comments-pagination-previous /-->
+
+    <!-- wp:comments-pagination-numbers /-->
+
+    <!-- wp:comments-pagination-next /-->
+    <!-- /wp:comments-pagination -->
+
+    <!-- wp:post-comments-form /-->
+  </div>
+  <!-- /wp:comments -->
+</div>
+<!-- /wp:group -->
