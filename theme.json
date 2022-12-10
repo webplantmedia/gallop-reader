@@ -26,7 +26,9 @@
         { "color": "#ffffff", "name": "Contrast", "slug": "contrast" },
         { "color": "#ffffff", "name": "Primary", "slug": "primary" },
         { "color": "#d8a927", "name": "Secondary", "slug": "secondary" },
-        { "color": "#ffffff", "name": "Tertiary", "slug": "tertiary" }
+        { "color": "#B85147", "name": "Tertiary", "slug": "tertiary" },
+        { "color": "#47b851", "name": "Fourth", "slug": "fourth" },
+        { "color": "#5147B8", "name": "Fifth", "slug": "fifth" }
       ]
     },
     "layout": {
@@ -217,13 +219,7 @@
   "styles": {
     "blocks": {
       "core/paragraph": {
-        "elements": {
-          "link": {
-            "color": {
-              "text": "var(--wp--preset--color--contrast)"
-            }
-          }
-        }
+        "elements": {}
       },
       "core/comments": {
         "elements": {
@@ -243,8 +239,11 @@
       "core/post-content": {
         "elements": {
           "link": {
-            "typography": { "textDecoration": "underline" },
-            ":hover": { "typography": { "textDecoration": "none" } }
+            "color": {
+              "text": "var(--wp--preset--color--secondary)"
+            },
+            "typography": { "textDecoration": "none" },
+            ":hover": { "typography": { "textDecoration": "underline" } }
           }
         }
       },
@@ -505,6 +504,7 @@
           "cite": {
             "typography": {
               "fontSize": "var(--wp--preset--font-size--small)",
+              "fontFamily": "'IBM Plex Mono', monospace",
               "fontStyle": "normal"
             }
           }
@@ -517,8 +517,8 @@
         },
         "typography": {
           "fontSize": "var:preset|font-size|large",
-          "fontStyle": "italic",
-          "fontWeight": "300"
+          "fontStyle": "normal",
+          "fontWeight": "400"
         },
         "color": { "text": "var:preset|color|cyan-bluish-gray" }
       },
@@ -657,7 +657,7 @@
         },
         ":hover": {
           "typography": {
-            "textDecoration": "none"
+            "textDecoration": "underline"
           }
         },
         ":focus": {
@@ -674,7 +674,7 @@
           }
         },
         "typography": {
-          "textDecoration": "underline"
+          "textDecoration": "none"
         }
       },
       "caption": {
