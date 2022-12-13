@@ -48,6 +48,8 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 .wp-block-comment-edit-link {
   display: flex;
   align-items: center;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: var(--wp--preset--font-size--small);
 }
 .wp-block-comment-author-name a,
 .wp-block-comment-date a,
