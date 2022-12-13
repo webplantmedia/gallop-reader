@@ -224,16 +224,21 @@
       "core/comments": {
         "elements": {
           "link": {
-            "typography": { "textDecoration": "underline" },
-            ":hover": { "typography": { "textDecoration": "none" } }
+            "typography": {
+              "textDecoration": "none"
+            },
+            ":hover": { "typography": { "textDecoration": "underline" } }
           }
         }
       },
       "core/comment-reply-link": {
-        "typography": { "fontSize": "var(--wp--preset--font-size--small)" }
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--small)",
+          "fontFamily": "'IBM Plex Mono', monospace"
+        }
       },
       "core/comments-title": {
-        "typography": { "fontSize": "var(--wp--preset--font-size--small)" }
+        "typography": {}
       },
       "core/image": { "border": { "radius": "100px 0 0 0" } },
       "core/post-content": {
@@ -391,14 +396,17 @@
               }
             },
             "typography": {
-              "textDecoration": "none"
+              "textDecoration": "none",
+              "fontSize": "var(--wp--preset--font-size--small)",
+              "fontFamily": "'IBM Plex Mono', monospace"
             }
           }
         }
       },
       "core/comment-date": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--small)"
+          "fontSize": "var(--wp--preset--font-size--small)",
+          "fontFamily": "'IBM Plex Mono', monospace"
         },
         "elements": {
           "link": {
@@ -428,10 +436,15 @@
       },
       "core/comment-edit-link": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--small)"
+          "fontSize": "var(--wp--preset--font-size--small)",
+          "fontFamily": "'IBM Plex Mono', monospace"
         }
       },
       "core/comments-pagination": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--small)",
+          "fontFamily": "'IBM Plex Mono', monospace"
+        },
         "spacing": {
           "margin": {
             "top": "var(--wp--preset--spacing--40)"

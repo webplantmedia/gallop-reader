@@ -43,3 +43,28 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
   display: flex;
   align-items: center;
 }
+.wp-block-comment-author-name,
+.wp-block-comment-date,
+.wp-block-comment-edit-link {
+  display: flex;
+  align-items: center;
+}
+.wp-block-comment-author-name a,
+.wp-block-comment-date a,
+.wp-block-comment-edit-link a {
+  display: block;
+}
+
+.wp-block-comment-template .wp-block-column > .wp-block-group > *::after {
+  content: "|";
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: var(--wp--preset--font-size--small);
+}
+.wp-block-comment-template
+  .wp-block-column
+  > .wp-block-group
+  > *:last-child::after {
+  display: none;
+}
