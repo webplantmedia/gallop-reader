@@ -252,7 +252,7 @@
       "core/comments-title": {
         "typography": {}
       },
-      "core/image": { "border": { "radius": "0 0 0 0" } },
+      "core/image": { "border": { "radius": "14px 14px 14px 14px" } },
       "core/post-content": {
         "elements": {
           "link": {
