@@ -220,16 +220,15 @@
     "blocks": {
       "core/search": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--system-font)",
-          "fontSize": "var(--wp--preset--font-size--medium)",
+          "fontFamily": "'IBM Plex Mono', monospace",
+          "fontSize": "var(--wp--preset--font-size--small)",
           "fontWeight": "normal",
           "textDecoration": "none"
         },
         "border": {
           "style": "solid",
           "width": "0 !important"
-        },
-        "color": {}
+        }
       },
       "core/paragraph": {
         "elements": {}
@@ -253,7 +252,7 @@
       "core/comments-title": {
         "typography": {}
       },
-      "core/image": { "border": { "radius": "100px 0 0 0" } },
+      "core/image": { "border": { "radius": "0 0 0 0" } },
       "core/post-content": {
         "elements": {
           "link": {

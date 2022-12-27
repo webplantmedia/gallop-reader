@@ -6,7 +6,7 @@ function gallop_reader_enqueue_fonts()
 	// wp_enqueue_style('gallop-theme-google-fonts', 'https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap', array(), null); // null allows google fonts to have multiple family args in url
 	// wp_enqueue_style('gallop-theme-custom-fonts', 'https://use.typekit.net/zho6vbm.css', array(), '1.2');
 
-	wp_enqueue_style('gallop-reader-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.3');
+	wp_enqueue_style('gallop-reader-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.7');
 }
 
 function gallop_reader_support()
@@ -38,6 +38,7 @@ function gallop_init()
 function gallop_post_like_email($post_id)
 {
 
+	$admin_email = get_bloginfo('admin_email');
 	$from = "contact@icflubbock.org";
 	$author_id = get_post_field('post_author', $post_id);
 	$email = get_the_author_meta('user_email', $author_id);
@@ -48,15 +49,20 @@ function gallop_post_like_email($post_id)
 
 	//php mailer variables
 	$subject = $name . ", a Reader Reacted to Your Post on ICFLubbock.org";
-	$headers = 'From: ' . $from . "\r\n" .
-		'Reply-To: ' . $from . "\r\n";
+	$headers[] = 'From: ' . $from;
+	$headers[] = 'Reply-To: ' . $from;
 
 	//Here put your Validation and send mail
 	wp_mail($to, $subject, $message, $headers);
+
+	if ($to !== $admin_email) {
+		wp_mail($admin_email, $subject, $message, $headers);
+	}
 }
 function gallop_comment_like_email($comment_id)
 {
 
+	$admin_email = get_bloginfo('admin_email');
 	$from = "contact@icflubbock.org";
 	$email = get_comment_author_email($comment_id);
 	$name = get_comment_author($comment_id);
@@ -66,9 +72,13 @@ function gallop_comment_like_email($comment_id)
 
 	//php mailer variables
 	$subject = $name . ", a Reader Reacted to Your Comment on ICFLubbock.org";
-	$headers = 'From: ' . $from . "\r\n" .
-		'Reply-To: ' . $from . "\r\n";
+	$headers[] = 'From: ' . $from;
+	$headers[] = 'Reply-To: ' . $from;
 
 	//Here put your Validation and send mail
 	wp_mail($to, $subject, $message, $headers);
+
+	if ($to !== $admin_email) {
+		wp_mail($admin_email, $subject, $message, $headers);
+	}
 }

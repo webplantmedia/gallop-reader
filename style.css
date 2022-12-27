@@ -7,7 +7,7 @@ Description: Gallop Theme is designed to take advantage of the new design tools 
 Requires at least: 6.1
 Tested up to: 6.1
 Requires PHP: 5.6
-Version: 1.0
+Version: 1.7
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 Text Domain: gallop-reader
@@ -75,4 +75,51 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 }
 .wp-block-search__input {
   padding: calc(0.667em + 2px) !important;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--wp--preset--color--contrast);
+  opacity: 0.1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--wp--preset--color--contrast);
+  opacity: 0.1;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--wp--preset--color--contrast);
+  opacity: 0.1;
+}
+textarea,
+input[type="text"],
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none !important;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  filter: grayscale(1) invert(1);
+}
+@media screen and (max-width: 1024px) {
+  .wp-block-search__input {
+    font-size: 16px !important;
+  }
+}
+.wp-block-navigation__responsive-container-open {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.wp-block-navigation__responsive-container-open::after {
+  content: "Menu";
+  font-family: "IBM Plex Mono", monospace;
+  margin-top: -3px;
+  font-size: var(--wp--preset--font-size--small);
 }
