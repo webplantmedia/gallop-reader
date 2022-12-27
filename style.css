@@ -70,3 +70,9 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
   > *:last-child::after {
   display: none;
 }
+.pld-like-dislike-wrap {
+  display: block !important;
+}
+.wp-block-search__input {
+  padding: calc(0.667em + 2px) !important;
+}
