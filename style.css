@@ -7,7 +7,7 @@ Description: Gallop Theme is designed to take advantage of the new design tools 
 Requires at least: 6.1
 Tested up to: 6.1
 Requires PHP: 5.6
-Version: 1.7
+Version: 1.12
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 Text Domain: gallop-reader
@@ -79,22 +79,22 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
   color: rgba(255, 255, 255, 0.5);
 }
 
-::placeholder {
+.wp-block-search ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--wp--preset--color--contrast);
-  opacity: 0.1; /* Firefox */
+  opacity: 0.3; /* Firefox */
 }
 
-:-ms-input-placeholder {
+.wp-block-search :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: var(--wp--preset--color--contrast);
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
-::-ms-input-placeholder {
+.wp-block-search ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: var(--wp--preset--color--contrast);
-  opacity: 0.1;
+  opacity: 0.3;
 }
 textarea,
 input[type="text"],
@@ -122,4 +122,89 @@ input[type="search"]::-webkit-search-cancel-button {
   font-family: "IBM Plex Mono", monospace;
   margin-top: -3px;
   font-size: var(--wp--preset--font-size--small);
+}
+.wpforms-submit {
+  background: transparent !important;
+  border: 2px solid white !important;
+  padding: 0.667em 1.333em !important;
+  border-radius: 5px !important;
+  font-family: "IBM Plex Mono", monospace !important;
+  font-size: var(--wp--preset--font-size--small) !important;
+  color: var(--wp--preset--color--contrast) !important;
+}
+.wpforms-form .wpforms-field input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none !important;
+  font-family: "IBM Plex Mono", monospace !important;
+  font-size: var(--wp--preset--font-size--small) !important;
+  border-width: 0 !important;
+  padding: calc(0.667em + 2px) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  border-radius: 5px !important;
+  height: auto !important;
+}
+@media screen and (max-width: 1024px) {
+  .wpforms-form .wpforms-field input {
+    font-size: 16px !important;
+  }
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--wp--preset--color--contrast);
+  opacity: 0.3; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--wp--preset--color--contrast);
+  opacity: 0.3;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--wp--preset--color--contrast);
+  opacity: 0.3;
+}
+div.wpforms-container-full .wpforms-form .wpforms-submit-container {
+  padding-top: 0 !important;
+}
+
+input[type="submit"],
+.wpforms-confirmation-container-full,
+div[submit-success]
+  > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+  background: transparent !important;
+  border-radius: 5px !important;
+  border: 2px solid white !important;
+  color: var(--wp--preset--color--contrast) !important;
+  font-size: var(--wp--preset--font-size--small) !important;
+  padding: 0.667em 1.333em !important;
+}
+div.wpforms-container-full .wpforms-form label.wpforms-error {
+  color: var(--wp--preset--color--contrast) !important;
+}
+.wp-block-button.is-style-outline > .wp-block-button__link,
+.wp-block-button .wp-block-button__link.is-style-outline {
+  /* padding-top: calc(0.667em - 2px) !important; */
+  /* padding-bottom: calc(0.667em - 2px) !important; */
+}
+div.wpforms-container-full {
+  margin-top: 0 !important;
+}
+form input,
+form textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none !important;
+  font-family: "IBM Plex Mono", monospace !important;
+  font-size: var(--wp--preset--font-size--medium) !important;
+  border-width: 0 !important;
+  padding: calc(0.667em + 2px) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 5px !important;
 }

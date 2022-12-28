@@ -615,7 +615,7 @@
           "radius": "5px",
           "color": "var(--wp--preset--color--contrast)",
           "style": "solid",
-          "width": "0"
+          "width": "2px"
         },
         "color": {
           "background": "var(--wp--preset--color--contrast)",
