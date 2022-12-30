@@ -20,7 +20,7 @@ function gallop_reader_support()
 
 add_action('after_setup_theme', 'gallop_reader_support');
 
-// add_action('init', 'gallop_init');
+add_action('init', 'gallop_init');
 function gallop_init()
 {
 	add_action('cld_after_ajax_process', 'gallop_comment_like_email', 10, 1);
@@ -186,5 +186,10 @@ function gallop_reader_render_block_core_post_comments_link($attributes, $conten
 		// $post_likes = '<div class="post-likes-sum">' . $total_count . ' ' . ($total_count === 1 ? 'like' : 'likes') . '</div>';
 	}
 
-	return '<div ' . $wrapper_attributes . '><a href=' . esc_url($comments_link) . '>' . $comment_html . '</a></div>' . $post_likes;
+	$comment_wrap = '';
+	if ($comments_number > 0) {
+		$comment_wrap = '<div ' . $wrapper_attributes . '><a href=' . esc_url($comments_link) . '>' . $comment_html . '</a></div>';
+	}
+
+	return $comment_wrap . $post_likes;
 }
