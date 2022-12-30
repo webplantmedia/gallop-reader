@@ -243,6 +243,16 @@
           }
         }
       },
+      "core/comment-content": {
+        "elements": {
+          "link": {
+            "typography": {
+              "textDecoration": "underline !important"
+            },
+            ":hover": { "typography": { "textDecoration": "underline" } }
+          }
+        }
+      },
       "core/comment-reply-link": {
         "typography": {
           "fontSize": "var(--wp--preset--font-size--small)",
